@@ -82,4 +82,5 @@ This guide is also available by typing /help
         await app.send_photo(user_id, img, caption=text,reply_markup=START_MARKUP)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
-    
+
+app.run()
