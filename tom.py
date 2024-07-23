@@ -1,5 +1,5 @@
 from pyrogram import Client, idle, filters, enums
-from db import is_voted, save_vote
+
 import time
 from SafoneAPI import SafoneAPI
 import os
