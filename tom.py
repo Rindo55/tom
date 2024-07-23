@@ -52,7 +52,7 @@ async def handle_message(bot, cmd: Message):
             ]
         ]
     ) 
-    text = f'''Hi, @{uname}! This is TOM 👋 
+    text = f'''Hi, {uname}! This is TOM 👋 
 
 Click on TOM to earn TOM Points. Invest points to buy upgrades, complete tasks, and invite your friends to earn more TOM Points
 
