@@ -27,4 +27,14 @@ async def handle_message(bot, cmd: Message):
     user_id = cmd.from_user.id
     username = cmd.from_user.username
     uname = f"@{username}"
-  
+    img = "https://i.ibb.co/3zKCMXN/IMG-20240723-181715-102.jpg"
+    text = f'''Hi, @{unsme}! This is TOM 👋 
+
+Click on TOM to earn TOM Points. Invest points to buy upgrades, complete tasks, and invite your friends to earn more TOM Points
+
+Get all the points you can to climb the ranking, you will receive an airdrop depending on the position you occupy in the ranking
+
+Higher position in the ranking = bigger airdrop
+
+Will you be the first in the ranking?'''
+    await app.send_photo(text=text, img
