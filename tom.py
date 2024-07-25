@@ -52,7 +52,7 @@ async def handle_message(bot, cmd: Message):
                 
                 InlineKeyboardButton(
                     text="🎮 Launch Game",
-                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?startapp=1425489930")
+                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?idRef=1425489930")
                 )
             ]
         ]
