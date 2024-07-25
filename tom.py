@@ -104,7 +104,7 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
     elif usr_cmd == "/help":
         await app.send_photo(user_id, img2, caption=text3, reply_markup=end_markup)
 @app.on_callback_query(filters.regex("info"))
-def info_callback(client, callback_query: CallbackQuery):
+async def info_callback(client, callback_query: CallbackQuery):
     # The text to send when the button is clicked
     info_text = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
 
@@ -122,10 +122,9 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
               
     
     # Send the info text as a response to the button click
-    callback_query.answer()  # Acknowledge the callback query
-    callback_query.message.reply_text(info_text)
+    await callback_query.answer()  # Acknowledge the callback query
+    await callback_query.message.reply_text(info_text)
 
 # Run the bot
-app.run()
 
 app.run()
