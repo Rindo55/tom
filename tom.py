@@ -42,7 +42,7 @@ async def handle_message(bot, cmd: Message):
             ],
             [
     
-                InlineKeyboardButton(text="❓ More Info", callback_data="info")])
+                InlineKeyboardButton(text="❓ More Info", callback_data="info")
             ]
         ]
     )
