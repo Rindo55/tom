@@ -71,16 +71,31 @@ Use your tomatoes to buy power-ups and harvest more tomatoes faster.
 
 Leverage your referral links and complete tasks to multiply your tomato earnings.
 
-Come on! It's harvest time!
+**Come on! It's harvest time!**
 
 This guide is also available by typing /help
 
 🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅'''
+    text3 = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
+
+Welcome to the farm!
+
+Playing TOM is straightforward. Just tap on the tomato and watch your balance grow.
+
+Use your tomatoes to buy power-ups and harvest more tomatoes faster.
+
+Leverage your referral links and complete tasks to multiply your tomato earnings.
+
+**Come on! It's harvest time!**
+
+🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅'''
+    img2 = "https://i.ibb.co/0QM7dzR/IMG-20240725-094100-985.jpg"
     usr_cmd = cmd.text.split("_", 1)[-1]
     
     if usr_cmd == "/start":
         await app.send_photo(user_id, img, caption=text,reply_markup=START_MARKUP)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
-
+    elif usr_cmd =="/help":
+        await app.send_photo(user_id, img2, caption=text3, reply_markup=end_markup)
 app.run()
