@@ -45,13 +45,13 @@ async def handle_message(bot, cmd: Message):
             ]
         ]
     )
-    end_markup = InlineKeyboardMarkup(
-        [
+    end_markup = KeyboardButtonSimpleWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")
+   '''     [
             [
-                InlineKeyboardButtonWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"),
+                InlineKeyboardButtonWebView(),
             ]
         ]
-    ) 
+    ) '''
     text = f'''Hi, {uname}! This is TOM 👋 
 
 Click on TOM to earn TOM Points. Invest points to buy upgrades, complete tasks, and invite your friends to earn more TOM Points
