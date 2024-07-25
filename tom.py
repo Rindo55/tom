@@ -124,7 +124,7 @@ This guide is also available by typing /help
     
     # Send the info text as a response to the button click
     await callback_query.answer()  # Acknowledge the callback query
-    await callback_query.message.reply_text(info_text)
+    await callback_query.message.reply_text(info_text, reply_markup=end_markup)
 
 # Run the bot
 
