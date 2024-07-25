@@ -4,8 +4,8 @@ from SafoneAPI import SafoneAPI
 import os
 import asyncio
 from html_telegraph_poster.upload_images import upload_image
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
-from pyrogram.raw.base.KeyboardButton import InlineKeyboardButtonWebView
+from pyrogram.types import Message, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
+
 from jikanpy import Jikan
 import signal
 from io import BytesIO
