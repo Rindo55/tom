@@ -47,7 +47,7 @@ async def handle_message(bot, cmd: Message):
     end_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="🎮 Launch Game", web_app(url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"))
+                InlineKeyboardButton(text="🎮 Launch Game", web_app(f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"))
             ]
         ]
     )
