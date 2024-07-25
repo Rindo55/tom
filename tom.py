@@ -5,7 +5,7 @@ import os
 import asyncio
 from html_telegraph_poster.upload_images import upload_image
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
-from pyrogram.types.KeyboardButton import InlineKeyboardButtonWebView
+from pyrogram.raw.base.KeyboardButton import InlineKeyboardButtonWebView
 from jikanpy import Jikan
 import signal
 from io import BytesIO
