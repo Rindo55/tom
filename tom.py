@@ -4,7 +4,7 @@ from SafoneAPI import SafoneAPI
 import os
 import asyncio
 from html_telegraph_poster.upload_images import upload_image
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, KeyboardButtonWebView
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, InlineKeyboardButtonWebView
 from jikanpy import Jikan
 import signal
 from io import BytesIO
@@ -47,7 +47,7 @@ async def handle_message(bot, cmd: Message):
     end_markup = InlineKeyboardMarkup(
         [
             [
-                KeyboardButtonWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"),
+                InlineKeyboardButtonWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"),
             ]
         ]
     ) 
