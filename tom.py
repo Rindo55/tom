@@ -32,7 +32,7 @@ async def handle_message(bot, cmd: Message):
         [
             [
                 InlineKeyboardButton(text="🎮 Launch Game", 
-                                     web_app=WebAppInfo(url=f"https://t.me/TomClicker_bot/TomClicker?startapp=1425489930")
+                                     web_app=WebAppInfo(url=f"https://telegram.me/TomClicker_bot/TomClicker?startapp=1425489930")
                                     )
             ],
             [
