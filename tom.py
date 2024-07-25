@@ -45,7 +45,7 @@ async def handle_message(bot, cmd: Message):
             ]
         ]
     )
-    end_markup = Keyboardbutton.KeyboardButtonSimpleWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")
+    end_markup = KeyboardButton.KeyboardButtonSimpleWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")
    
     text = f'''Hi, {uname}! This is TOM 👋 
 
