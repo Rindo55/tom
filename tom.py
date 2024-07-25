@@ -32,7 +32,8 @@ async def handle_message(bot, cmd: Message):
         [
             [
                 InlineKeyboardButton(text="🎮 Launch Game", 
-                                     web_app=WebAppInfo(url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")                                  
+                                     web_app=WebAppInfo(url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")
+                                    )
             ],
             [
                 InlineKeyboardButton(text="🍅 Tom Website", url="https://www.tomcoin.app/")
@@ -41,7 +42,6 @@ async def handle_message(bot, cmd: Message):
                 InlineKeyboardButton(text="🐦 TOM Twitter", url="https://twitter.com/TomCoinBnb")
             ],
             [
-    
                 InlineKeyboardButton(text="❓ More Info", callback_data="info")
             ]   
         ]
