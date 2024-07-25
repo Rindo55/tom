@@ -31,7 +31,8 @@ async def handle_message(bot, cmd: Message):
     START_MARKUP = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")
+                InlineKeyboardButton(text="🎮 Launch Game", 
+                                     web_app=WebAppInfo(url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")                                  
             ],
             [
                 InlineKeyboardButton(text="🍅 Tom Website", url="https://www.tomcoin.app/")
@@ -40,7 +41,9 @@ async def handle_message(bot, cmd: Message):
                 InlineKeyboardButton(text="🐦 TOM Twitter", url="https://twitter.com/TomCoinBnb")
             ],
             [
-                InlineKeyboardButton(text="❓ More Info", url="https://t.me/tom_clicker_bot?start=info"),
+                InlineKeyboardMarkup([
+                    InlineKeyboardButton(text="❓ More Info", callback_data="info")])
+                )
             ]
         ]
     )
@@ -101,4 +104,29 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
         await app.send_message(user_id, text2, reply_markup=end_markup)
     elif usr_cmd == "/help":
         await app.send_photo(user_id, img2, caption=text3, reply_markup=end_markup)
+@app.on_callback_query(filters.regex("info"))
+def info_callback(client, callback_query: CallbackQuery):
+    # The text to send when the button is clicked
+    info_text = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
+
+**Welcome to the farm!**
+
+Playing TOM is straightforward. Just tap on the tomato and watch your balance grow.
+
+Use your tomatoes to buy power-ups and harvest more tomatoes faster.
+
+Leverage your referral links and complete tasks to multiply your tomato earnings.
+
+**Come on! It's harvest time!**
+
+🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅'''
+              
+    
+    # Send the info text as a response to the button click
+    callback_query.answer()  # Acknowledge the callback query
+    callback_query.message.reply_text(info_text)
+
+# Run the bot
+app.run()
+
 app.run()
