@@ -23,7 +23,7 @@ app = Client("anime_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 
 
-@app.on_message(filters.private & filters.command("start"))
+@app.on_message(filters.private & filters.text)
 async def handle_message(bot, cmd: Message):
     user_id = cmd.from_user.id
     username = cmd.from_user.username
@@ -96,6 +96,6 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
         await app.send_photo(user_id, img, caption=text,reply_markup=START_MARKUP)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
-    elif usr_cmd =="/help":
+    elif usr_cmd == "/help":
         await app.send_photo(user_id, img2, caption=text3, reply_markup=end_markup)
 app.run()
