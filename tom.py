@@ -78,7 +78,6 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
 
 **Come on! It's harvest time!**
 
-This guide is also available by typing /help
 
 🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅'''
     text3 = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
@@ -117,6 +116,8 @@ Use your tomatoes to buy power-ups and harvest more tomatoes faster.
 Leverage your referral links and complete tasks to multiply your tomato earnings.
 
 **Come on! It's harvest time!**
+
+This guide is also available by typing /help
 
 🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅'''
               
