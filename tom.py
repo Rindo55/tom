@@ -1,11 +1,10 @@
 from pyrogram import Client, idle, filters, enums
-import pyrogram.raw.types.KeyboardButtonWebView
 import time
 from SafoneAPI import SafoneAPI
 import os
 import asyncio
 from html_telegraph_poster.upload_images import upload_image
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, KeyboardButtonWebView
 from jikanpy import Jikan
 import signal
 from io import BytesIO
