@@ -24,6 +24,7 @@ app = Client("anime_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 @app.on_message(filters.private & filters.text)
 async def handle_message(bot, cmd: Message):
+    global end_markup
     user_id = cmd.from_user.id
     username = cmd.from_user.username
     uname = f"@{username}"
