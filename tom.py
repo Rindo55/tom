@@ -41,9 +41,8 @@ async def handle_message(bot, cmd: Message):
                 InlineKeyboardButton(text="🐦 TOM Twitter", url="https://twitter.com/TomCoinBnb")
             ],
             [
-                InlineKeyboardMarkup([
-                    InlineKeyboardButton(text="❓ More Info", callback_data="info")])
-                )
+    
+                InlineKeyboardButton(text="❓ More Info", callback_data="info")])
             ]
         ]
     )
