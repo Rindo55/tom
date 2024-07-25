@@ -63,7 +63,7 @@ Higher position in the ranking = bigger airdrop
 Will you be the first in the ranking?'''
     text2 = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
 
-Welcome to the farm!
+**Welcome to the farm!**
 
 Playing TOM is straightforward. Just tap on the tomato and watch your balance grow.
 
@@ -78,7 +78,7 @@ This guide is also available by typing /help
 🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅'''
     text3 = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
 
-Welcome to the farm!
+**Welcome to the farm!**
 
 Playing TOM is straightforward. Just tap on the tomato and watch your balance grow.
 
