@@ -29,6 +29,7 @@ async def handle_message(bot, cmd: Message):
     uname = f"@{username}"
     img = "https://i.ibb.co/3zKCMXN/IMG-20240723-181715-102.jpg"
     START_MARKUP = InlineKeyboardMarkup(
+        [
             [
                 InlineKeyboardButton(text="🎮 Launch Game", 
                                      web_app=WebAppInfo(url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930")                                  
@@ -42,7 +43,8 @@ async def handle_message(bot, cmd: Message):
             [
     
                 InlineKeyboardButton(text="❓ More Info", callback_data="info")
-            ]    
+            ]   
+        ]
     )
     end_markup = InlineKeyboardMarkup(
         [
