@@ -1,5 +1,5 @@
 from pyrogram import Client, idle, filters, enums
-
+import pyrogram.raw.types.KeyboardButtonWebView
 import time
 from SafoneAPI import SafoneAPI
 import os
@@ -48,7 +48,7 @@ async def handle_message(bot, cmd: Message):
     end_markup = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"),
+                KeyboardButtonWebView(text="🎮 Launch Game", url=f"https://app.tomcoin.app/?idUser={user_id}&idRef=1425489930"),
             ]
         ]
     ) 
