@@ -140,7 +140,8 @@ This guide is also available by typing /help
     # Send the info text as a response to the button click
     await callback_query.answer()  # Acknowledge the callback query
     await callback_query.message.reply_text(info_text, reply_markup=end_markup)
-
+    x = json.loads(WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930"))
+    print(x)
 # Run the bot
 
 app.run()
