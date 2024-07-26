@@ -100,7 +100,7 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
     usr_cmd = cmd.text.split("_", 1)[-1]
     
     if usr_cmd == "/start":
-        await app.send_photo(user_id, img, caption=text)
+        await app.send_message(user_id, text)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
     elif usr_cmd == "/help":
