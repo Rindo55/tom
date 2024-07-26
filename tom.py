@@ -109,6 +109,17 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
 @app.on_callback_query(filters.regex("info"))
 async def info_callback(client, callback_query: CallbackQuery):
     # The text to send when the button is clicked
+    end_markup = InlineKeyboardMarkup(
+        [
+            [
+                
+                InlineKeyboardButton(
+                    text="🎮 Launch Game",
+                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930")
+                )
+            ]
+        ]
+    )
     info_text = '''🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅🍅
 
 **Welcome to the farm!**
