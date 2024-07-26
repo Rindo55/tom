@@ -61,7 +61,7 @@ async def handle_message(bot, cmd: Message):
     )
     x = json.loads(WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930"))
     print(x)
-    text = f'''Hi, {uname}! This is TOM 👋 
+    text = f'''Hi, {uname}! This is TOM [👋](https://t.me/TomClicker_bot/TomClicker?startapp=1425489930)
 
 Click on TOM to earn TOM Points. Invest points to buy upgrades, complete tasks, and invite your friends to earn more TOM Points
 
@@ -101,7 +101,7 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
     usr_cmd = cmd.text.split("_", 1)[-1]
     
     if usr_cmd == "/start":
-        await app.send_photo(user_id, img, caption=text,reply_markup=START_MARKUP)
+        await app.send_photo(user_id, img, caption=text)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
     elif usr_cmd == "/help":
