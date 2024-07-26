@@ -59,8 +59,7 @@ async def handle_message(bot, cmd: Message):
             ]
         ]
     )
-    x = json.loads(WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930"))
-    print(x)
+    
     text = f'''Hi, {uname}! This is TOM [👋](https://t.me/TomClicker_bot/TomClicker?startapp=1425489930)
 
 Click on TOM to earn TOM Points. Invest points to buy upgrades, complete tasks, and invite your friends to earn more TOM Points
