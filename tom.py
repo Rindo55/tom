@@ -53,11 +53,13 @@ async def handle_message(bot, cmd: Message):
                 
                 InlineKeyboardButton(
                     text="🎮 Launch Game",
-                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930", start_parameter=1425489930)
+                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930")
                 )
             ]
         ]
     )
+    x = json.loads(WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930"))
+    print(x)
     text = f'''Hi, {uname}! This is TOM 👋 
 
 Click on TOM to earn TOM Points. Invest points to buy upgrades, complete tasks, and invite your friends to earn more TOM Points
