@@ -137,7 +137,7 @@ This guide is also available by typing /help
               
     
     # Send the info text as a response to the button click
-    await callback_query.answer(text="hello")  # Acknowledge the callback query
+    await callback_query.answer(url="https://google.com")  # Acknowledge the callback query
     await callback_query.message.reply_text(info_text, reply_markup=end_markup)
     print(WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930"))
     
