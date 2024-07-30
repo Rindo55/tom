@@ -100,7 +100,7 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
     usr_cmd = cmd.text.split("_", 1)[-1]
     
     if usr_cmd == "/start":
-        await app.send_message(user_id, text)
+        await app.send_message(user_id, text, reply_markup=START_MARKUP)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
     elif usr_cmd == "/help":
@@ -137,7 +137,7 @@ This guide is also available by typing /help
               
     
     # Send the info text as a response to the button click
-    await callback_query.answer()  # Acknowledge the callback query
+    await callback_query.answer(url="https://t.me/TomClicker_bot/TomClicker?startapp=1425489930")  # Acknowledge the callback query
     await callback_query.message.reply_text(info_text, reply_markup=end_markup)
     print(WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930"))
     
