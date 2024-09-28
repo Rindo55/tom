@@ -3,6 +3,7 @@ import time
 from SafoneAPI import SafoneAPI
 import os
 import asyncio
+from db import add_user, full_userbase, present_user, del_user
 from html_telegraph_poster.upload_images import upload_image
 from pyrogram.types import Message, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, WebAppInfo
 from jikanpy import Jikan
