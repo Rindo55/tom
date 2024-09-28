@@ -98,7 +98,7 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
     usr_cmd = cmd.text.split("_", 1)[-1]
     
     if usr_cmd == "/start":
-        if not present_user(id):
+        if not await present_user(id):
             try:
                 add_user(id)
             except:
