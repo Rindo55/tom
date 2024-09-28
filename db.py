@@ -13,8 +13,8 @@ async def present_user(user_id : int):
     found = user_data.find_one({'_id': user_id})
     return bool(found)
 
-async def add_user(user_id: int):
-    user_data.insert_one({'_id': user_id})
+async def add_user(user_id: int, uname):
+    user_data.insert_one({'_id': user_id, 'username': uname})
     return
 
 async def full_userbase():
