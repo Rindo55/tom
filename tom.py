@@ -101,8 +101,8 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
         if not await present_user(id):
             try:
                 await add_user(id)
-                except:
-                    pass
+            except:
+                pass
         await app.send_message(user_id, text)
     elif usr_cmd == "/start info":
         await app.send_message(user_id, text2, reply_markup=end_markup)
