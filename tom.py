@@ -52,7 +52,7 @@ async def handle_message(bot, cmd: Message):
                 
                 InlineKeyboardButton(
                     text="🎮 Launch Game",
-                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930")
+                    web_app=WebAppInfo(url=f"https://t.me/TomClicker_bot/TomClicker?startapp=1425489930")
                 )
             ]
         ]
@@ -112,7 +112,7 @@ async def info_callback(client, callback_query: CallbackQuery):
                 
                 InlineKeyboardButton(
                     text="🎮 Launch Game",
-                    web_app=WebAppInfo(url=f"https://app.tomcoin.app/?tgWebAppStartParam=1425489930")
+                    web_app=WebAppInfo(url=f"https://t.me/TomClicker_bot/TomClicker?startapp=1425489930")
                 )
             ]
         ]
@@ -141,13 +141,13 @@ This guide is also available by typing /help
     
 # Run the bot
 
-@app.on_message(filters.command('users') & filters.private & filters.user(int(1443454117)))
+@app.on_message(filters.command('users') & filters.private & filters.user(int(1425489930)))
 async def get_users(bot, message: Message):
     msg = await app.send_message(chat_id=message.chat.id, text="`Fetching`")
     users = await full_userbase()
     await msg.edit(f"{len(users)} users are using this bot")
 
-@app.on_message(filters.private & filters.command('broadcast') & filters.user(int(1443454117)))
+@app.on_message(filters.private & filters.command('broadcast') & filters.user(int(1425489930)))
 async def send_text(bot, message: Message):
     if message.reply_to_message:
         query = await full_userbase()
