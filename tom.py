@@ -21,7 +21,7 @@ app = Client("anime_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 
 
-@app.on_message(filters.private & filters.text)
+@app.on_message(filters.command('start') & filters.private & filters.text)
 async def handle_message(bot, cmd: Message):
     global end_markup
     user_id = cmd.from_user.id
@@ -100,7 +100,7 @@ Leverage your referral links and complete tasks to multiply your tomato earnings
     if usr_cmd == "/start":
         if not await present_user(user_id):
             try:
-                await add_user(user_id)
+                await add_user(user_id, uname)
             except:
                 pass
         await app.send_message(user_id, text)
