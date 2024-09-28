@@ -4,9 +4,7 @@ from SafoneAPI import SafoneAPI
 import os
 import asyncio
 from db import add_user, full_userbase, present_user, del_user
-from html_telegraph_poster.upload_images import upload_image
 from pyrogram.types import Message, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, WebAppInfo
-from jikanpy import Jikan
 import signal
 from io import BytesIO
 import sys
@@ -15,7 +13,6 @@ import base64
 import aiohttp
 import json
 import requests
-from html_telegraph_poster import TelegraphPoster
 api_id = 3845818
 api_hash = "95937bcf6bc0938f263fc7ad96959c6d"
 bot_token = "7374311692:AAFJhri3iPUdTc5UPkqMVFIspVVee-VvDgM"
