@@ -6,7 +6,7 @@ import asyncio
 from db import add_user, full_userbase, present_user, del_user
 from pyrogram.types import Message, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, WebAppInfo
 import signal
-
+from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 from io import BytesIO
 import sys
 import random
