@@ -165,7 +165,7 @@ async def send_text(bot, message: Message):
         unsuccessful = 0
         repl = message.reply_to_message_id
         user_id = message.from_user.id
-        jar = await goat.get_messages(user_id, repl)
+        jar = await bot.get_messages(user_id, repl)
         texter = jar.text
         tse = texter.replace("🍅","[🍅](https://t.me/TomClicker_bot/TomClicker?startapp=1425489930)")
         pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
