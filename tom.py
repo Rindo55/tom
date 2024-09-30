@@ -6,6 +6,7 @@ import asyncio
 from db import add_user, full_userbase, present_user, del_user
 from pyrogram.types import Message, InlineKeyboardMarkup, KeyboardButton, InlineKeyboardButton, CallbackQuery, InputMediaPhoto, WebAppInfo
 import signal
+
 from io import BytesIO
 import sys
 import random
@@ -162,15 +163,19 @@ async def send_text(bot, message: Message):
         blocked = 0
         deleted = 0
         unsuccessful = 0
-        
+        repl = message.reply_to_message_id
+        user_id = message.from_user.id
+        jar = await goat.get_messages(user_id, repl)
+        texter = jar.text
+        tse = texter.replace("🍅","[🍅](https://t.me/TomClicker_bot/TomClicker?startapp=1425489930)")
         pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
         for chat_id in query:
             try:
-                await broadcast_msg.copy(chat_id)
+                await bot.send_message(chat_id, tse) 
                 successful += 1
             except FloodWait as e:
                 await asyncio.sleep(e.x)
-                await broadcast_msg.copy(chat_id)
+                await bot.send_message(chat_id, tse) 
                 successful += 1
             except UserIsBlocked:
                 await del_user(chat_id)
